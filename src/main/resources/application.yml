@@ -1,0 +1,16 @@
+logging:
+  level:
+    org.springframework: info
+    com.mkyong: info
+  #path: log4j2.xml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dockertest
+
+server:
+  servlet:
+    context-path: /dockertest
+  port: 8123
