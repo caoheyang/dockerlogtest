@@ -16,11 +16,17 @@ import javax.xml.ws.Response;
 public class LogController {
     private static final Logger logger = LoggerFactory.getLogger(LogController.class);
 
-    @GetMapping("/info")
+    @GetMapping("/logger/info")
     public ResponseEntity<String> info() {
         logger.info("试一下log的实时打印");
         return ResponseEntity.status(HttpStatus.OK).body("ok");
 
     }
 
+    @GetMapping("/logger/v2/info")
+    public ResponseEntity<String> infov2() {
+        logger.info("试一下log的实时打印");
+        return ResponseEntity.status(HttpStatus.OK).body("ok");
+
+    }
 }
